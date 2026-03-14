@@ -87,7 +87,7 @@ if args.hf_mirror is not None:
 from modules import config
 from modules.hash_cache import init_cache
 
-os.environ["U2NET_HOME"] = config.path_inpaint
+os.environ["U2NET_HOME"] = config.normalize_path(config.path_inpaint)
 
 os.environ['GRADIO_TEMP_DIR'] = config.temp_path
 
@@ -104,11 +104,11 @@ def download_models(default_model, previous_default_models, checkpoint_downloads
     from modules.util import get_file_from_folder_list
 
     for file_name, url in vae_approx_filenames:
-        load_file_from_url(url=url, model_dir=config.path_vae_approx, file_name=file_name)
+        load_file_from_url(url=url, model_dir=config.normalize_path(config.path_vae_approx), file_name=file_name)
 
     load_file_from_url(
         url='https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin',
-        model_dir=config.path_fooocus_expansion,
+        model_dir=config.normalize_path(config.path_fooocus_expansion),
         file_name='pytorch_model.bin'
     )
 
@@ -132,12 +132,12 @@ def download_models(default_model, previous_default_models, checkpoint_downloads
         model_dir = os.path.dirname(get_file_from_folder_list(file_name, config.paths_checkpoints))
         load_file_from_url(url=url, model_dir=model_dir, file_name=file_name)
     for file_name, url in embeddings_downloads.items():
-        load_file_from_url(url=url, model_dir=config.path_embeddings, file_name=file_name)
+        load_file_from_url(url=url, model_dir=config.normalize_path(config.path_embeddings), file_name=file_name)
     for file_name, url in lora_downloads.items():
         model_dir = os.path.dirname(get_file_from_folder_list(file_name, config.paths_loras))
         load_file_from_url(url=url, model_dir=model_dir, file_name=file_name)
     for file_name, url in vae_downloads.items():
-        load_file_from_url(url=url, model_dir=config.path_vae, file_name=file_name)
+        load_file_from_url(url=url, model_dir=config.normalize_path(config.path_vae), file_name=file_name)
 
     return default_model, checkpoint_downloads
 

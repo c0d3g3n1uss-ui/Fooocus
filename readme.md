@@ -484,3 +484,36 @@ Or `run_realistic.bat` as
 For practical translation, you may create your own file like `Fooocus/language/jp.json` or `Fooocus/language/cn.json` and then use flag `--language jp` or `--language cn`. Apparently, these files do not exist now. **We need your help to create these files!**
 
 Note that if no `--language` is given and at the same time `Fooocus/language/default.json` exists, Fooocus will always load `Fooocus/language/default.json` for translation. By default, the file `Fooocus/language/default.json` does not exist.
+
+---
+
+# 🚀 Enhanced Fork by c0d3g3n1us
+
+This repository is an **enhanced fork** of the original Fooocus, featuring professional additions for video generation, voice cloning, and social media content creation:
+
+## ✨ New Features in This Fork
+
+- **🎬 Video Face-Swapping** - Swap faces in videos with motion preservation
+- **🎙️ Voice Cloning & Synthesis** - Clone any voice using XTTS_v2 and synchronize with Wav2Lip
+- **✨ Animation & Video** - Generate videos from images using Stable Video Diffusion (SVD)
+- **📱 Social Media Creator** - Auto-generate TikTok, Instagram, YouTube Shorts with captions
+- **📝 HeyGen-style Captions** - Automatic speech recognition and professional subtitle generation
+- **🎨 Full HD & Hyper-realistic Optimization** - Enhanced settings for maximum quality
+
+### See the Details
+
+- 📖 [Feature Documentation](00_LEEME_PRIMERO.md)
+- 🎥 [Video Face-Swapping Guide](VIDEO_FACESWAP_GUIDE.md)
+- 📱 [Social Media Creator Guide](SOCIAL_MEDIA_CREATOR_README.md)
+- 📝 [Caption Generation Guide](CAPTIONS_GUIDE.md)
+- 🚀 [Quick Start Guide](QUICK_START.md)
+
+## 💰 Support This Enhanced Version
+
+If you find this enhanced version useful, please consider supporting the development by donating via PayPal.
+
+**[👉 Donate via PayPal to @belakiss (Minimum $20)](DONATIONS.md)**
+
+Your donations help create and maintain these professional features!
+
+**Developer**: [@c0d3g3n1us](https://github.com/c0d3g3n1us) 🌟

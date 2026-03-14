@@ -1,1 +1,21 @@
 *       @lllyasviel
+
+# Fooocus Enhanced Fork - Code Ownership by c0d3g3n1us
+
+# Video processing modules
+/modules/video_processor.py @c0d3g3n1us
+/modules/video_ui.py @c0d3g3n1us
+
+# Voice and caption modules
+/modules/caption_generator.py @c0d3g3n1us
+/modules/animation_synthesizer.py @c0d3g3n1us
+
+# Social media integration
+/modules/social_media_creator.py @c0d3g3n1us
+/modules/social_media_ui.py @c0d3g3n1us
+
+# Examples and documentation
+/examples/ @c0d3g3n1us
+/DONATIONS.md @c0d3g3n1us
+/README_FORK.md @c0d3g3n1us
+.github/FUNDING.yml @c0d3g3n1us

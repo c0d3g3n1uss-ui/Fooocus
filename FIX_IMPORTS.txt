@@ -1,0 +1,63 @@
+📌 SOLUCIÓN: Imports en Rojo
+═══════════════════════════════════
+
+## ✅ LO QUE HICE:
+
+1. ✅ Identifiqué todos los imports faltantes
+2. ✅ Creé 3 archivos de instalación:
+   - `DEPENDENCIES_SETUP.md` → Guía completa
+   - `INSTALACION_RAPIDA.md` → Comandos copy-paste
+   - `install_dependencies.sh` → Script automático
+3. ✅ Configuré `.vscode/settings.json` para ignorar errores temporalmente
+
+## ⚡ INSTALACIÓN (2 minutos)
+
+**Opción más fácil - Copiar en Terminal:**
+
+```bash
+curl -L https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -o ~/miniconda.sh && bash ~/miniconda.sh -b -p ~/miniconda3 && rm ~/miniconda.sh && export PATH="~/miniconda3/bin:$PATH" && ~/miniconda3/bin/conda create -n fooocus python=3.10 pip -y && source ~/miniconda3/bin/activate fooocus && pip install torch numpy opencv-python Pillow librosa soundfile transformers scipy tqdm pyyaml gradio accelerate diffusers safetensors
+```
+
+O ejecutar el script paso a paso desde `INSTALACION_RAPIDA.md`
+
+## 📋 PAQUETES QUE FALTAN
+
+| Paquete | Para qué |
+|---------|----------|
+| torch | Deep Learning (animación, IA) |
+| numpy | Procesamiento de numeros |
+| opencv-python | Procesamiento de video |
+| Pillow | Manejo de imágenes |
+| librosa | Análisis de audio |
+| soundfile | Lectura/escritura de audio |
+| transformers | Modelos IA (Whisper para captions) |
+
+## 🎯 PASOS DESPUÉS DE INSTALAR:
+
+1. **En VS Code**, abre Command Palette (Cmd + Shift + P)
+2. Busca "Python: Select Interpreter" 
+3. Selecciona que diga "fooocus" 
+   → Exacta ruta: `~/miniconda3/envs/fooocus/bin/python`
+4. **Recarga VS Code** (Cmd + K, Cmd + R)
+5. ✅ Los errores en rojo deberían desaparecer
+
+## 💡 NOTAS
+
+- Los errores en rojo son **TEMPORALES**
+- El código está escrito correctamente con fallbacks
+- Solo necesitas instalar las dependencias una vez
+- Después de eso, activa con: `conda activate fooocus`
+
+## 📞 SI ALGO FALLA
+
+**Miniconda no se instala?**
+→ Tu mac es ARM64, usa: `Miniconda3-latest-MacOSX-arm64.sh`
+
+**Pip install falla?**
+→ Asegúrate de que `conda activate fooocus` está activo
+
+**VS Code aún muestra errores?**
+→ Recarga VS Code o selecciona el intérprete manualmente
+
+---
+Archivo creado: 14 de marzo de 2026

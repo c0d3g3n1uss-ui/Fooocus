@@ -292,24 +292,62 @@ def worker():
                     positive_cond, negative_cond = core.apply_controlnet(
                         positive_cond, negative_cond,
                         pipeline.loaded_ControlNets[cn_path], cn_img, cn_weight, 0, cn_stop)
-        imgs = pipeline.process_diffusion(
-            positive_cond=positive_cond,
-            negative_cond=negative_cond,
-            steps=steps,
-            switch=switch,
-            width=width,
-            height=height,
-            image_seed=task['task_seed'],
-            callback=callback,
-            sampler_name=async_task.sampler_name,
-            scheduler_name=final_scheduler_name,
-            latent=initial_latent,
-            denoise=denoising_strength,
-            tiled=tiled,
-            cfg_scale=async_task.cfg_scale,
-            refiner_swap_method=async_task.refiner_swap_method,
-            disable_preview=async_task.disable_preview
-        )
+
+        # Modern Diffusers backend (optional)
+        if getattr(modules.config, 'use_diffusers_engine', False) and getattr(modules.config, 'diffusers_model_id', None):
+            try:
+                import modules.diffusers_engine as diffusers_engine
+
+                imgs = diffusers_engine.generate(
+                    prompt=task['task_prompt'],
+                    negative_prompt=task['task_negative_prompt'],
+                    model_id=modules.config.diffusers_model_id,
+                    scheduler_name=final_scheduler_name,
+                    width=width,
+                    height=height,
+                    steps=steps,
+                    guidance_scale=async_task.cfg_scale,
+                    seed=task['task_seed'],
+                )
+            except Exception as e:
+                print(f"[Diffusers] generation failed, falling back to legacy engine: {e}")
+                imgs = pipeline.process_diffusion(
+                    positive_cond=positive_cond,
+                    negative_cond=negative_cond,
+                    steps=steps,
+                    switch=switch,
+                    width=width,
+                    height=height,
+                    image_seed=task['task_seed'],
+                    callback=callback,
+                    sampler_name=async_task.sampler_name,
+                    scheduler_name=final_scheduler_name,
+                    latent=initial_latent,
+                    denoise=denoising_strength,
+                    tiled=tiled,
+                    cfg_scale=async_task.cfg_scale,
+                    refiner_swap_method=async_task.refiner_swap_method,
+                    disable_preview=async_task.disable_preview
+                )
+        else:
+            imgs = pipeline.process_diffusion(
+                positive_cond=positive_cond,
+                negative_cond=negative_cond,
+                steps=steps,
+                switch=switch,
+                width=width,
+                height=height,
+                image_seed=task['task_seed'],
+                callback=callback,
+                sampler_name=async_task.sampler_name,
+                scheduler_name=final_scheduler_name,
+                latent=initial_latent,
+                denoise=denoising_strength,
+                tiled=tiled,
+                cfg_scale=async_task.cfg_scale,
+                refiner_swap_method=async_task.refiner_swap_method,
+                disable_preview=async_task.disable_preview
+            )
         del positive_cond, negative_cond  # Save memory
         if inpaint_worker.current_task is not None:
             imgs = [inpaint_worker.current_task.post_process(x) for x in imgs]

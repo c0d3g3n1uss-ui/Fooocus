@@ -1,0 +1,167 @@
+# 🎯 FOOOCUS - 3 PASOS SIMPLES
+
+## 📱 Opción 1: MÁS FÁCIL (Una sola línea)
+
+Abre Terminal (zsh) y pega esto todo de una vez:
+
+```bash
+cd /Users/c0d3g3n1us/Fooocus && bash START.sh
+```
+
+**Eso es.** El script hace todo automáticamente.
+
+---
+
+## 📱 Opción 2: PASO A PASO (Si la Opción 1 falla)
+
+### Paso 1: Abrir Terminal
+
+Presiona: **Cmd + Espacio**, escribe `Terminal`, Enter
+
+### Paso 2: Copiar y pegar (uno a la vez)
+
+```bash
+cd /Users/c0d3g3n1us/Fooocus
+```
+Presiona Enter
+
+```bash
+python3 -m venv .venv
+```
+Presiona Enter
+
+```bash
+source .venv/bin/activate
+```
+Presiona Enter (deberías ver `(.venv)` antes del símbolo)
+
+```bash
+pip install --upgrade pip && pip install numpy torch torchvision opencv-python Pillow librosa soundfile transformers scipy tqdm pyyaml gradio
+```
+Presiona Enter (espera 5-15 minutos)
+
+### Paso 3: Ejecutar
+
+```bash
+python webui.py
+```
+
+Cuando veas:
+```
+Running on http://127.0.0.1:7860
+```
+
+Abre esa URL en tu navegador.
+
+---
+
+## 📱 Opción 3: SUPER SIMPLE (Si Python no funciona)
+
+Si `python3` no se reconoce:
+
+```bash
+/usr/local/bin/python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Luego sigue el Paso 2.
+
+---
+
+## ✅ Después de Instalar
+
+### En el WebUI que se abre:
+
+1. **Sube una FOTO** (cualquiera)
+2. **Sube tu VOZA** (3-10 segundos, la tuya!)
+3. **Escribe un SCRIPT** (lo que quieres que diga)
+4. **Marca**: ✅ "Add Captions"
+5. **Selecciona**: "tiktok" o "instagram"
+6. **Click**: "🚀 Create Content"
+7. **Espera**: 2-5 minutos
+8. **Descarga**: Tu video con captions automáticos
+
+---
+
+## ❓ Si Algo Falla
+
+### "command not found: python3"
+→ Tienes que instalar Python primero: https://www.python.org/downloads/
+
+### "No module named 'torch'"
+→ Repite el comando `pip install ...` completo
+
+### "ModuleNotFoundError"
+→ Espera a que termine la instalación de pip (puede tomar 10-15 min)
+
+### "Connection error"
+→ Verifica tu conexión a internet
+
+---
+
+## 🎖️ Cada Vez Que USES Fooocus
+
+Abre Terminal y ejecuta:
+
+```bash
+cd /Users/c0d3g3n1us/Fooocus
+source .venv/bin/activate
+python webui.py
+```
+
+O simplemente si está en favoritos:
+
+```bash
+cd /Users/c0d3g3n1us/Fooocus && bash START.sh
+```
+
+---
+
+## 📦 Qué Se Instala
+
+| Paquete | Para Qué |
+|---------|----------|
+| **torch** | AI/Deep Learning |
+| **numpy** | Matemáticas |
+| **opencv** | Procesamiento de video |
+| **Pillow** | Imágenes |
+| **librosa** | Audio |
+| **transformers** | Modelos IA (Whisper para captions) |
+| **gradio** | WebUI |
+| **scipy, tqdm, pyyaml** | Utilidades |
+
+---
+
+## 🎯 RESUMEN FINAL
+
+**Copia esto en Terminal:**
+
+```bash
+cd /Users/c0d3g3n1us/Fooocus && bash START.sh
+```
+
+**Espera 10-15 minutos.**
+
+**Abre el URL que aparece.**
+
+**¡Disfruta!**
+
+---
+
+## 📚 Documentos Disponibles
+
+| Documento | Para Qué | Recomendación |
+|-----------|----------|---------------|
+| `00_LEEME_PRIMERO.md` | Overview completo | 📌 LEE PRIMERO |
+| `START.sh` | Script inicio automático | 👈 EJECUTA ESTO |
+| `INSTALL_COMPLETE.sh` | Instalación manual paso a paso | Alternativa |
+| `MANUAL_INSTALL.md` | Guía detallada | Si necesitas ayuda |
+| `QUICK_START.md` | Ejemplos rápidos | Después de instalar |
+
+---
+
+**Tiempo estimado:** 15 minutos  
+**Dificultad:** ⭐ Muy fácil  
+**Resultado:** ✨ Video profesional con captions HeyGen-style
+
+¡Adelante! 🚀
