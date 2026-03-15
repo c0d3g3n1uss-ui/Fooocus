@@ -14,20 +14,48 @@ from PIL import ImageFilter, ImageEnhance
 sys.path.insert(0, str(Path(__file__).parent))
 
 def create_demo_interface():
-    """Create the Gradio demo interface"""
+    """
+    Create the Gradio demo interface for Fooocus Enhanced
     
-    with gr.Blocks(title="Fooocus Enhanced by c0d3g3n1us") as demo:
+    Features:
+    - Advanced Facial Editing with professional presets
+    - Video Face-Swapping capabilities
+    - Voice Cloning & Text-to-Speech
+    - Social Media Content Generator
+    - Caption Generation with multi-language support
+    
+    Author: c0d3g3n1us
+    Version: 1.0.0
+    License: GPL-3.0
+    
+    Returns:
+        gr.Blocks: Configured Gradio blocks interface
+    """
+    
+    with gr.Blocks(
+        title="🎨 Fooocus Enhanced - Professional AI Image Generation",
+        theme=gr.themes.Soft()
+    ) as demo:
         
         # Header
         gr.HTML("""
-        <div style='text-align: center; padding: 20px;'>
-            <h1>🚀 FOOOCUS ENHANCED FORK</h1>
-            <h3>Advanced AI Image & Video Generation</h3>
-            <p style='color: #666;'>
-                <strong>Developed by:</strong> <a href='https://github.com/c0d3g3n1us'>@c0d3g3n1us</a>
-                | <strong>Support:</strong> <a href='https://paypal.me/belakiss'>PayPal @belakiss</a>
-            </p>
-            <hr style='margin: 20px 0;'>
+        <div style='text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; margin-bottom: 20px;'>
+            <h1 style='color: white; margin: 0 0 10px 0;'>🎨 FOOOCUS ENHANCED</h1>
+            <h3 style='color: #e0e0e0; margin: 0 0 15px 0;'>Professional AI Image & Video Generation Platform</h3>
+            <div style='color: white; font-size: 14px; line-height: 1.8;'>
+                <p style='margin: 8px 0;'>
+                    <strong>🌟 Lead Developer:</strong> 
+                    <a href='https://github.com/c0d3g3n1us' target='_blank' style='color: #ffeb3b; font-weight: bold; text-decoration: none;'>@c0d3g3n1us</a>
+                </p>
+                <p style='margin: 8px 0;'>
+                    <strong>💡 Version:</strong> 1.0.0 | <strong>📜 License:</strong> GPL-3.0 | <strong>⭐ Status:</strong> Production Ready
+                </p>
+                <p style='margin: 8px 0;'>
+                    <a href='https://github.com/c0d3g3n1uss-ui/Fooocus' target='_blank' style='color: #ffeb3b; text-decoration: none;'>📖 Documentation</a>
+                    | <a href='https://github.com/c0d3g3n1us' target='_blank' style='color: #ffeb3b; text-decoration: none;'>👤 Developer Profile</a>
+                    | <a href='https://github.com/c0d3g3n1uss-ui/Fooocus/blob/main/CONTRIBUTORS.md' target='_blank' style='color: #ffeb3b; text-decoration: none;'>🏆 Credits</a>
+                </p>
+            </div>
         </div>
         """)
         
@@ -509,20 +537,55 @@ Details: {str(e)}
                     outputs=quality_output
                 )
         
-        # Footer
+        # Footer - Professional Credits
         gr.HTML("""
-        <div style='text-align: center; padding: 30px; border-top: 1px solid #ddd; margin-top: 30px;'>
-            <p>
-                <strong>FOOOCUS ENHANCED FORK</strong> • Built with ❤️ by 
-                <a href='https://github.com/c0d3g3n1us'>c0d3g3n1us</a>
-            </p>
-            <p>
-                <strong>Support the Project:</strong> 
-                <a href='https://paypal.me/belakiss/20'>Donate $20+ on PayPal @belakiss</a>
-            </p>
-            <p style='color: #999; font-size: 12px;'>
-                Based on <a href='https://github.com/lllyasviel/Fooocus'>Fooocus</a> by lllyasviel
-            </p>
+        <div style='text-align: center; padding: 40px 20px; background: #f5f5f5; border-top: 3px solid #667eea; margin-top: 40px; border-radius: 0 0 10px 10px;'>
+            <div style='max-width: 900px; margin: 0 auto;'>
+                <h3 style='color: #333; margin-top: 0;'>🎨 Fooocus Enhanced 1.0.0</h3>
+                
+                <div style='background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea;'>
+                    <p style='margin: 10px 0; font-size: 14px;'>
+                        <strong>🌟 Lead Developer & Architect:</strong>
+                    </p>
+                    <p style='margin: 5px 0; font-size: 16px;'>
+                        <a href='https://github.com/c0d3g3n1us' target='_blank' style='color: #667eea; font-weight: bold; text-decoration: none;'>
+                            @c0d3g3n1us
+                        </a>
+                        <span style='color: #999; font-size: 12px;'> - Advanced Facial Editing | Colab Integration | Code Quality</span>
+                    </p>
+                </div>
+                
+                <p style='margin: 15px 0; color: #666; font-size: 13px;'>
+                    <strong>Repository:</strong> 
+                    <a href='https://github.com/c0d3g3n1uss-ui/Fooocus' target='_blank' style='color: #667eea; text-decoration: none;'>
+                        c0d3g3n1uss-ui/Fooocus
+                    </a>
+                    | 
+                    <strong>License:</strong> GPL-3.0
+                    | 
+                    <strong>Status:</strong> ✅ Production Ready
+                </p>
+                
+                <p style='margin: 15px 0; color: #666; font-size: 13px;'>
+                    <a href='https://github.com/c0d3g3n1uss-ui/Fooocus/blob/main/CONTRIBUTORS.md' target='_blank' style='color: #667eea; text-decoration: none;'>👥 Team & Credits</a>
+                    | 
+                    <a href='https://github.com/c0d3g3n1uss-ui/Fooocus/blob/main/README_ENHANCED.md' target='_blank' style='color: #667eea; text-decoration: none;'>📖 Documentation</a>
+                    |
+                    <a href='https://github.com/c0d3g3n1uss-ui/Fooocus/issues' target='_blank' style='color: #667eea; text-decoration: none;'>🐛 Report Issues</a>
+                </p>
+                
+                <hr style='margin: 20px 0; border: none; border-top: 1px solid #e0e0e0;'>
+                
+                <p style='color: #999; font-size: 11px; margin: 10px 0;'>
+                    Built with ❤️ using Gradio | Based on <a href='https://github.com/lllyasviel/Fooocus' target='_blank' style='color: #667eea; text-decoration: none;'>Fooocus</a> by lllyasviel | 
+                    Powered by <a href='https://stability.ai/' target='_blank' style='color: #667eea; text-decoration: none;'>Stable Diffusion XL</a>
+                </p>
+                
+                <p style='margin: 10px 0; font-size: 11px;'>
+                    ⭐ If you find this helpful, please <a href='https://github.com/c0d3g3n1uss-ui/Fooocus' target='_blank' style='color: #667eea; text-decoration: none;'>star on GitHub</a> and 
+                    <a href='https://github.com/c0d3g3n1us' target='_blank' style='color: #667eea; text-decoration: none;'>follow @c0d3g3n1us</a> for more projects
+                </p>
+            </div>
         </div>
         """)
     

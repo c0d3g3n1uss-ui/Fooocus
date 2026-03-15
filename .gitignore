@@ -48,6 +48,107 @@ user_path_config-deprecated.txt
 /test/stderr.txt
 /cache.json*
 /config_states/
+
+# Python
+*.pyc
+*.pyo
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv
+env/
+venv/
+ENV/
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+*.swp
+*.swo
+*~
+.DS_Store
+.history/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Logs
+*.log
+webui_output.log
+*.log.*
+
+# Temporary Files
+temp/
+tmp/
+*.tmp
+*.bak
+~*
+
+# OS specific
+Thumbs.db
+*.lnk
+
+# GPU/CUDA Cache
+.cache/
+*.cache
+
+# Colab specific
+sample_data/
+.colab/
+
+# Node modules
+node_modules/
+
+# Package managers
+pip.log
+npm-debug.log
+
+# Config overrides
+config.local.txt
+settings.local.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Backup files
+backup/
+*.bz2
+
+# Documentation build
+docs/_build/
+site/
+
+# Keep important directories
+!models/.gitkeep
+!outputs/.gitkeep
 /node_modules
 /package-lock.json
 /.coverage*
