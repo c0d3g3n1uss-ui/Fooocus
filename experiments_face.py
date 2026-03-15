@@ -1,5 +1,5 @@
-import cv2
-import extras.face_crop as cropper
+import cv2  # type: ignore
+import extras.face_crop as cropper  # type: ignore
 
 
 img = cv2.imread('lena.png')

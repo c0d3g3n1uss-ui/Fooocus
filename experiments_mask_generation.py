@@ -20,5 +20,6 @@ sam_options = SAMOptions(
 
 mask_image, _, _, _ = generate_mask_from_image(image, sam_options=sam_options)
 
-merged_masks_img = Image.fromarray(mask_image)
-merged_masks_img.show()
+if mask_image is not None:
+    merged_masks_img = Image.fromarray(mask_image)
+    merged_masks_img.show()
